@@ -24,11 +24,8 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 		frame.addMouseMotionListener(frame);
 		JMenuBar menu=new JMenuBar();
 		frame.setJMenuBar(menu);
-		
-		
 		JMenu options =new JMenu("选项");
 		menu.add(options);
-
 		JMenuItem start=options.add("开始");
 		start.addActionListener(frame.new StartActionListener());
 		JMenuItem stop=options.add("清除");
@@ -44,6 +41,7 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 		frame.setVisible(true);
 		frame.setResizable(false);
 	}
+	//开始
 	class StartActionListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e) 
@@ -54,6 +52,7 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 			world.setShape();
 		}
 	}
+	//清屏
 	class StopActionListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e) 
@@ -64,6 +63,7 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 			world.setStop();
 		}
 	}
+	//停止
 	class PauseActionListener implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e) 
@@ -84,6 +84,7 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 			world.setBackground(Color.orange);
 		}
 	}
+	//移动鼠标放置细胞
 	public void mouseDragged(MouseEvent e) {
 		if(world.diy){
 		int x=e.getX();
