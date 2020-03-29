@@ -20,9 +20,9 @@ public class World extends JPanel implements Runnable{
 	private CellStatus[][] currentGeneration;
 	private CellStatus[][] nextGeneration;
 	private volatile boolean x = false;
+	//初始化地图
 	public World(int rows, int columns)
 	{
-		
 		this.rows=rows;
 		this.columns=columns;
 		record = new JLabel();
@@ -46,6 +46,7 @@ public class World extends JPanel implements Runnable{
 		currentGeneration=generation1;
 		nextGeneration=generation2;
 	}
+	//细胞初始化
 	public void transfrom(CellStatus[][] generation, int pauseshape[][])
 	{
 		for(int i=0;i<rows;i++)
