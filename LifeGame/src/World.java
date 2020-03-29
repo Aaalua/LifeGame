@@ -144,6 +144,7 @@ public class World extends JPanel implements Runnable{
 			}
 		}
 	}
+	
 	public void setStop()
 	{
 		setZero();		
