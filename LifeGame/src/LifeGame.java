@@ -18,6 +18,7 @@ public class LifeGame extends JFrame implements MouseMotionListener{
 	}
 	public static void main(String[]args)
 	{
+		//绘制窗口
 		LifeGame frame=new LifeGame(40, 50);
 		
 		frame.addMouseMotionListener(frame);

@@ -27,6 +27,7 @@ public class World extends JPanel implements Runnable{
 		this.columns=columns;
 		record = new JLabel();
 		add(record);
+		//细胞初始化
 		generation1=new CellStatus[rows][columns];
 		for(int i=0;i<rows;i++)
 		{
@@ -46,7 +47,6 @@ public class World extends JPanel implements Runnable{
 		currentGeneration=generation1;
 		nextGeneration=generation2;
 	}
-	//细胞初始化
 	public void transfrom(CellStatus[][] generation, int pauseshape[][])
 	{
 		for(int i=0;i<rows;i++)
@@ -64,6 +64,7 @@ public class World extends JPanel implements Runnable{
 			}
 		}
 	}
+	//运行
 	public void run()
 	{
 		while(true)
