@@ -107,6 +107,7 @@ public class World extends JPanel implements Runnable{
 			}
 		}
 	}
+	//统计现存细胞个数
 	public void updateNumber()
 	{
 		String s = "现存细胞数目："+lnum ;
@@ -268,6 +269,7 @@ public class World extends JPanel implements Runnable{
 			return false;
 		}
 	}
+	//细胞每次繁衍刷新时间
 	private void sleep(int x)
 	{
 		try {
